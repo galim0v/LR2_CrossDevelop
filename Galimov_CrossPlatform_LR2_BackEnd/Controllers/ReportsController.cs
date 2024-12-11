@@ -13,7 +13,6 @@ namespace Galimov_CrossPlatform_LR2_BackEnd.Controllers
         [HttpGet("summary")]
         public IActionResult GetSummary()
         {
-            // Только авторизованные пользователи могут получить сводный отчет
             return Ok(new { Success = true, Message = "Данные для авторизованных пользователей" });
         }
 
@@ -21,7 +20,6 @@ namespace Galimov_CrossPlatform_LR2_BackEnd.Controllers
         [HttpPost("add")]
         public IActionResult AddData([FromBody] string data)
         {
-            // Только администраторы могут добавлять данные
             return Ok(new { Success = true, Message = "Данные добавлены" });
         }
     }
