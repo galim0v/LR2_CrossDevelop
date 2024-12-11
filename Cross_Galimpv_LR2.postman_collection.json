@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "0d208a24-ec42-4f88-92a3-8a5154b5357f",
+		"name": "Cross_Galimpv_LR2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34875081"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7087/api/Auth/login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "View all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"name\": \"Sleep\",\r\n    \"price\": 10000,\r\n    \"sellerId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7087/api/Products/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View product by product id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Products/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit product by product id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 5,\r\n  \"name\": \"Sleep\",\r\n  \"price\": 9999,\r\n  \"sellerId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7087/api/Products/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Products",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete products by products id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Products/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Products",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get products by seller id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Products/BySeller/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Products",
+								"BySeller",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get seller and product by avgPrice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Products/ByAveragePrice/5200",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Products",
+								"ByAveragePrice",
+								"5200"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get products by min price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Products/ByPrice/9000",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Products",
+								"ByPrice",
+								"9000"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "Get summury login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImV4cCI6MTc2NTQyMTY2MiwiaXNzIjoiQUciLCJhdWQiOiJBUEljbGllbnRzIn0.gKHYCmHnO26cMpm3kh42OCrb_I1Gdi_099bD7bW0Ayw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Reports/summary",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Reports",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJhZG1pbiIsImV4cCI6MTc2NTQyMTY2MiwiaXNzIjoiQUciLCJhdWQiOiJBUEljbGllbnRzIn0.gKHYCmHnO26cMpm3kh42OCrb_I1Gdi_099bD7bW0Ayw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\"test\"",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7087/api/Reports/add",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Reports",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sellers",
+			"item": [
+				{
+					"name": "Get all sellers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Sellers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Sellers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add seller",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 3,\r\n  \"name\": \"TM\",\r\n  \"email\": \"TM@asu.ru\",\r\n  \"products\": [\r\n    {\r\n      \"id\": 6,\r\n      \"name\": \"15 points\",\r\n      \"price\": 10,\r\n      \"sellerId\": 3\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7087/api/Sellers",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Sellers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get seller by seller id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Sellers/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Sellers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit seller by seller id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"TM\",\r\n    \"email\": \"TM@asu_teacher.ru\",\r\n    \"products\": [\r\n        {\r\n            \"id\": 6,\r\n            \"name\": \"15 points\",\r\n            \"price\": 10.0,\r\n            \"sellerId\": 3\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7087/api/Sellers/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Sellers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete seller by seller id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Sellers/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Sellers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get seller by min Product Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Sellers/WithProductCount/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Sellers",
+								"WithProductCount",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get seller by domian mail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7087/api/Sellers/ByEmailDomain/asu",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7087",
+							"path": [
+								"api",
+								"Sellers",
+								"ByEmailDomain",
+								"asu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
