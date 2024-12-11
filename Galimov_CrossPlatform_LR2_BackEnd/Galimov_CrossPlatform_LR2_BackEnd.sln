@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35431.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galimov_CrossPlatform_LR2_BackEnd", "Galimov_CrossPlatform_LR2_BackEnd.csproj", "{F4826161-EC83-469C-935F-31614B047C3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4826161-EC83-469C-935F-31614B047C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4826161-EC83-469C-935F-31614B047C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4826161-EC83-469C-935F-31614B047C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4826161-EC83-469C-935F-31614B047C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35E4F235-882C-4E0B-AFA7-B6039D5C6C2F}
+	EndGlobalSection
+EndGlobal

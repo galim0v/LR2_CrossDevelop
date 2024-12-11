@@ -1,0 +1,6 @@
+@Galimov_CrossPlatform_LR2_BackEnd_HostAddress = http://localhost:5260
+
+GET {{Galimov_CrossPlatform_LR2_BackEnd_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
